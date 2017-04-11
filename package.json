@@ -1,0 +1,26 @@
+{
+  "name": "teddy_api",
+  "version": "1.0.0",
+  "description": "Backend service for teddy and the lovegang app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubenring/teddy_api.git"
+  },
+  "keywords": [
+    "api",
+    "music",
+    "band",
+    "songs",
+    "populare"
+  ],
+  "author": "reuben ringdal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rubenring/teddy_api/issues"
+  },
+  "homepage": "https://github.com/rubenring/teddy_api#readme"
+}
