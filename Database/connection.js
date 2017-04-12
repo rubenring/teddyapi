@@ -1,8 +1,4 @@
 import mysql from 'mysql';
-import { dbconfig } from '../Configuration';
+import {dbconfig} from '../Configuration';
 
-let connection = mysql.createConnection(dbconfig);
-
-module.exports = {
-    connection
-}
+export default mysql.createConnection(dbconfig);

@@ -1,8 +1,3 @@
-'use strict'
-import getSongs from './getSongs'
-import getSong from './getSong'
-
-module.exports = {
-    getSongs,
-    getSong
-}
+'use strict';
+export {default as getSongs} from './getSongs';
+export {default as getSong} from './getSong';

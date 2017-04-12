@@ -1,7 +1,5 @@
-import serverconfig from './serverconfig';
-import dbconfig from './dbconfig';
+'use strict';
 
-module.exports = {
-    serverconfig,
-    dbconfig
-}
+export {default as serverconfig} from './serverconfig';
+export {default as dbconfig} from './dbconfig';
+export {default as loggconfig} from './loggconfig';

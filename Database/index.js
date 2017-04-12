@@ -1,7 +1,2 @@
-import { connection } from './connection.js';
-import dbConnect from './dbConnect.js';
-
-module.exports = {
-    connection,
-    dbConnect
-}
+export {default as connection} from './connection.js';
+export {default as dbConnect} from './dbConnect.js';

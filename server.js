@@ -6,9 +6,9 @@ import bodyParser from 'body-parser';
 import winston from 'winston';
 
 /* Imports */
-import { serverconfig } from './Configuration';
-import { connection, dbConnect } from './Database';
-import { loggreq, errorHandler } from './Middleware';
+import {serverconfig, loggconfig} from './Configuration';
+import {connection, dbConnect} from './Database';
+import {loggreq, errorHandler} from './Middleware';
 import api from './Routes';
 
 /* Variables */
@@ -17,8 +17,9 @@ let port = process.env.PORT || serverconfig.PORT;
 
 
 /* Middleware */
+winston.configure(loggconfig);
 app.use(bodyParser.urlencoded({
-  extended: true
+  extended: true,
 }));
 app.use(bodyParser.json());
 app.use(loggreq);

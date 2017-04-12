@@ -1,8 +1,12 @@
+'use strict';
+
 import winston from 'winston';
 
 export default (err, req, res, next) => {
-    if(err){
-        winston.error(err);
+    if(!err) {
+        return next();
     }
-    next(); 
+    winston.error('error', err);
+    res.status(500);
+    res.send('500: Internal server error');
 };

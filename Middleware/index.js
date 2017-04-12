@@ -1,7 +1,4 @@
-import loggreq from './loggReq';
-import errorHandler from './errorHandler';
+'use strict';
 
-module.exports = {
-    loggreq,
-    errorHandler
-}
+export {default as loggreq} from './loggReq';
+export {default as errorHandler} from './errorHandler';

@@ -1,22 +1,16 @@
-'use strict'
-import postMusic from "./Post";
-import { getSong, getSongs } from "./Get";
+'use strict';
+import postMusic from './Post';
+import {getSong, getSongs} from './Get';
+import express from 'express';
 
-const music = require('express').Router();
+const music = express.Router();
 
-
-//Get
-//fooditem.get('/', getForhandlere);
-//fooditem.get('/:id', getForhandler);
-
-//Put
-//fooditem.put('/:id', putForhandlere);
-//Post
-
+music.get('/', (req, res, next) => {
+    res.status(200)
+    .json({message: '/Music'});
+});
 music.get('/song/:id', getSong);
 music.get('/songs', getSongs);
 
 music.post('/', postMusic);
-
-
 export default music;

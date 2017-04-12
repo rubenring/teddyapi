@@ -1,4 +1,6 @@
-import { connection } from './connection.js'
+'use strict';
+
+import connection from './connection.js';
 import winston from 'winston';
 
 export default (err) => {
@@ -7,4 +9,5 @@ export default (err) => {
         return;
     }
     winston.info(`connected as id ${connection.threadId} on port ${connection.config.port}`);
-}
+};
+

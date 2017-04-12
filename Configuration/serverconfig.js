@@ -1,5 +1,5 @@
-const config = {
-    PORT: 3000
-}
+'use strict';
 
-export default config;
+ export default {
+    PORT: 3000,
+};
