@@ -3,7 +3,7 @@
 import {connection} from '../../../Database';
 
 export default (req, res, next) => {
-    connection.query('SELECT * FROM `members`', (error, results, fields) => {
+    connection.query('SELECT * FROM `goals`', (error, results, fields) => {
         // error will be an Error if one occurred during the query
         // results will contain the results of the query
         // fields will contain information
@@ -15,6 +15,6 @@ export default (req, res, next) => {
             res.status(500).json({error: error.code});
             return next(error);
         }
-        res.status(200).json({members: results});
+        res.status(200).json({goals: results});
     });
 };

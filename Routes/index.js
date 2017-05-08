@@ -3,6 +3,7 @@
 import express from 'express';
 import music from './Music';
 import members from './Members';
+import goals from './Goals';
 import notFound from './NotFound';
 const _router = express.Router();
 
@@ -11,6 +12,7 @@ _router.get('/', (req, res)=>{
 });
 _router.use('/music', music);
 _router.use('/members', members);
+_router.use('/goals', goals);
 _router.use('*', notFound);
 
 export default _router;

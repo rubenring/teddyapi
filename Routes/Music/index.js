@@ -1,6 +1,6 @@
 'use strict';
 import postMusic from './Post';
-import {getSong, getSongs} from './Get';
+import {getSong, getSongs, listen} from './Get';
 import express from 'express';
 
 const music = express.Router();
@@ -11,6 +11,7 @@ music.get('/', (req, res, next) => {
 });
 music.get('/song/:id', getSong);
 music.get('/songs', getSongs);
+music.get('/listen/:id', listen);
 
 music.post('/', postMusic);
 export default music;
