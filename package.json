@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm -rf ./dist",
     "start": "echo \"Error: no start specified\" && exit 1",
-    "dev": "webpack --env=dev && node dist/bundle.js",
+    "dev": "babel-node server.js --env=development",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "eslint": "eslint"

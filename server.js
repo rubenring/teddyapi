@@ -24,7 +24,6 @@ const compiler = webpack(config);
 
 /* Middleware */
 winston.configure(loggconfig);
-console.log(process.env.NODE_ENV)
 //app.use('/static', express.static(path.join(__dirname, '/Assets')));
 if (process.env.NODE_ENV == 'development') {
   app.use(webpackDevMiddleware(compiler, {

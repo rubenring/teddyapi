@@ -7,17 +7,7 @@ module.exports = merge([{
         'webpack-hot-middleware/client',
     ],
     output: {
-        publicPath: '/',
-    },
-    devServer: {
-        historyApiFallback: true,
-        stats: 'errors-only',
-        host: 'localhost',
-        port: '3000',
-        overlay: {
-            errors: true,
-            warnings: true,
-        },
+        publicPath: 'http://localhost:3000/scripts/',
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
